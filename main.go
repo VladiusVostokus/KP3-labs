@@ -8,10 +8,13 @@ import (
 
 func main() {
 	http.HandleFunc("/time", api)
+
 	server := &http.Server{
 		Addr: ":8795",
 	}
+
 	err := server.ListenAndServe()
+
 	if err != nil {
 		panic(err)
 	}
