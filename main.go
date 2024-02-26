@@ -30,6 +30,6 @@ func api(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	w.Write(barr)
 }
