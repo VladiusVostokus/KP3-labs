@@ -26,8 +26,10 @@ func api(w http.ResponseWriter, r *http.Request) {
 	formattedTime := currentTime.Format(time.RFC3339)
 	now["time"] = string(formattedTime)
 	barr, err := json.Marshal(now)
+
 	if err != nil {
 		panic(err)
 	}
+	
 	w.Write(barr)
 }
